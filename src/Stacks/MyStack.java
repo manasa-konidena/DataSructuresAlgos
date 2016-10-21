@@ -1,47 +1,54 @@
 package Stacks;
 
 public class MyStack {
+	
 	static int maxSize;
 	static int top;
-	static long[] stackArray;
+	static int[] stackArray;
 	
-	
-	public MyStack(int size){
-		maxSize = size;
-		top = -1;
-		stackArray = new long[maxSize];
+	static class Stacky{
+		
+		Stacky(int size){
+			maxSize = size;
+			top = -1;
+			stackArray = new int[maxSize];
+		}
+
+		static int push(int i){
+			return stackArray[++top] = i;
+		}
+		
+		static int pop(){
+			return stackArray[top--];
+		}
+		
+		static int peek(){
+			return stackArray[top];
+		}
+		
+		static boolean isEmpty(){
+			return (top == -1);
+		}
+		
+		static boolean isFull(){
+			return (top == maxSize - 1);
+		}
 	}
 	
-	static long push(long i){
-		return stackArray[++top] = i;
-	}
 	
-	static long pop(){
-		return stackArray[top--];
-	}
 	
-	static long peek(){
-		return stackArray[top];
-	}
 	
-	static boolean isEmpty(){
-		return (top == -1);
-	}
 	
-	static boolean isFull(){
-		return (top == maxSize - 1);
-	}
-	
-	static void printStack(MyStack s){
+	static void printStack(Stacky s){
 		while(s.isEmpty() == false){
 			System.out.println(s.pop());
 		}
 	}
 	
-	static long maxOfStack(MyStack s1){
-		long max = 0;
+	static int maxOfStack(Stacky s1){
+		int max = 0;
 		while(s1.isEmpty() == false){
-			long p = s1.pop();
+			int p = s1.pop();
 			if(max < p){
 				max = p;
 			}
@@ -50,7 +57,7 @@ public class MyStack {
 	}
 	
 	public static void main(String[] args){
-		MyStack s1 = new MyStack(10);
+		Stacky s1 = new Stacky(10);
 		s1.push(1);
 		s1.push(2);
 		s1.push(3);
