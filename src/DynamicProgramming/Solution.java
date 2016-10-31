@@ -5,6 +5,8 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
+import java.util.Comparator;
+import java.util.Collections;
 
 
 class Circle{
@@ -49,7 +51,7 @@ public class Solution{
         
               Collections.sort(circleArray, new Comparator<Circle>() {
     			  @Override public int compare(Circle c1, Circle c2){
-    				  return Integer.compare(c2.rad, c1.rad);
+    				  return Integer.compare(c2.xCo, c1.xCo);
     			  }
     		  });
  
@@ -74,10 +76,7 @@ public class Solution{
     				maxIndex = i;
     			}
     		}
-        
-            for(int p=0;p<maxArray.length;p++){
-              //  System.out.println(maxArray[p] +":" + p);
-            }
+
 
     		System.out.println(maxArray[maxIndex]);
     		
