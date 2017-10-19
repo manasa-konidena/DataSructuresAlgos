@@ -121,7 +121,7 @@ public class BreadthFirstSearch {
 		        Scanner sc = new Scanner(System.in);
 		        System.out.print("Enter graph input file name: ");
 		        String file = sc.nextLine();
-		        Graph graph = new Graph(file);
-		        graph.bfs();
+		        //Graph graph = new Graph(file);
+		        //graph.bfs();
 	}
 }
