@@ -1,6 +1,6 @@
 <h1>Problem Solving is fun!</h1>
 
-<h2>Stuff that I do in here. Always growing, sometimes hot and sometimes cold based on how much more I'm learning school! :D</h2>
+<h2>Stuff that I do in here. This repo is always growing, sometimes fast and sometimes slow based on how much more I'm learning at school! :D</h2>
 
 <ul>
 	<li>Linked Lists</li>
